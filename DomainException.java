@@ -1,4 +1,4 @@
-package domain;
+package domain.model;
 
 public class DomainException extends RuntimeException {
 	private static final long serialVersionUID = 1L;
