@@ -5,10 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import domain.Person;
+import domain.model.Person;
 
 public class PersonDbInMemory {
-	private Map<String, Person> persons = new HashMap<String, Person>();
+	private Map<String, Person> persons = new HashMap<>();
 	
 	public PersonDbInMemory () {
 		Person administrator = new Person("admin", "admin@ucll.be", "t", "Ad", "Ministrator");
@@ -51,5 +51,9 @@ public class PersonDbInMemory {
 			throw new DbException("No id given");
 		}
 		persons.remove(personId);
+	}
+
+	public int getNumberOfPersons() {
+		return persons.size();
 	}
 }

@@ -1,4 +1,4 @@
-package domain;
+package domain.model;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

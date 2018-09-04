@@ -1,14 +1,14 @@
-package db;
+package domain.db;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import domain.Product;
+import domain.model.Product;
 
 public class ProductDbInMemory {
-	private Map<Integer, Product> records = new HashMap<Integer, Product>();
+	private Map<Integer, Product> records = new HashMap<>();
 	
 	public ProductDbInMemory () {
 		Product rose = new Product("Rose", "Thorny plant", 2.25);
@@ -53,5 +53,9 @@ public class ProductDbInMemory {
 			throw new DbException("No valid id given");
 		}
 		records.remove(id);
+	}
+
+	public int getNumbeOfProducts() {
+		return records.size();
 	}
 }
